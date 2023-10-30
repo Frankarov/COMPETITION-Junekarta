@@ -1,0 +1,1267 @@
+fileFormatVersion: 2
+guid: da34623f09ad6f848a0a279726adc16d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WeaponTracer_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 4
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85ee553eaad75549924250e42bde54e
+      internalID: 513396037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 198
+        width: 4
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091e6b5bc937e074391f1506a2936df3
+      internalID: 1848868393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 221
+        width: 4
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2886a12ee6d7af8428c6c5c0d752a290
+      internalID: 1629492179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 246
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd5e9b0a59baa24f9fb48c3bb586c78
+      internalID: 1712550132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 216
+        width: 4
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a632af5a6ce5c4c9604240a1510b78
+      internalID: 229063252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 227
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80d5acdd1310b489af62bc2229d16b
+      internalID: -618647124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 237
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3913d59028f744993ad7e35412fb66
+      internalID: 1085065711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_17
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 206
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcecf32e3aa30441ac40fdd4e68921b
+      internalID: -175008689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_18
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 217
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9a3b4db6891884593ed80310881f83
+      internalID: 1535714631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_20
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 209
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef555565f26795d4289305b104f77924
+      internalID: -17012725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_21
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 191
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031d1eb7dbc371d448ad74ab3ee957f4
+      internalID: 1446701546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_22
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 209
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715c2aec3c9bdf74da8db7a9fa24b996
+      internalID: 1372389262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 190
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b2cde7d90025e40bc297a0fa435239
+      internalID: -541040006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_24
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 138
+        width: 4
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e2e52df28187b469a55899c2be694a
+      internalID: 1541043302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 188
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5532c3400d2a44fa504cb31207efb0
+      internalID: -2012148965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 174
+        width: 4
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ee38a6cb6d18249a210508b5d8c6aa
+      internalID: 457884418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_27
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 177
+        width: 4
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badc8dfcf92df2845ab21da640061bc8
+      internalID: -764443947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_28
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 191
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f22f0e7889f0d440aa461238303dc37
+      internalID: 1137275129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 102
+        width: 4
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a26581223d79545b358fbd13f2f555
+      internalID: -73211088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 162
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde9f99153ec27b46aeacdf50598707e
+      internalID: -430890974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_32
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 154
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44ac82e482e31c4b83b9ae5ba012926
+      internalID: 2081359206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_33
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 162
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054978498f42df0408f670680ed3c551
+      internalID: -587166136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_37
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 151
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5a088aa090c2b4d83159caa0384252
+      internalID: 1229899396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_38
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 147
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb9ac348943895438fa193c19087c26
+      internalID: 1708479049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_39
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 165
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313accd4be580574b98a38fbbc76c8a0
+      internalID: 1162236224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_41
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 122
+        width: 4
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91856d74b7bd74f41864014b4e2d0e37
+      internalID: -336888929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_42
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 138
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0ce384226a8994b8925e476401a1f9
+      internalID: 340028525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_44
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 142
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5820e95453036d54686b220be9a1c0db
+      internalID: -417232284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_47
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 126
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c841e074f58c147bca7bc07f095c87
+      internalID: 1380647168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_48
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 110
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482aa8806f1b76f4895ed15de217980e
+      internalID: 1193050612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_49
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 127
+        width: 4
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf7083b721908b469ebff246ff09948
+      internalID: 1771851509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_50
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 102
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c54940a747d1e4b92b99769be90776
+      internalID: 1950260545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_51
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 122
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c2c75965a8dd24c83f01df2a4b9333
+      internalID: -678390072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_53
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 53
+        width: 4
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04472d4090fd80419462bc5f9d4eca7
+      internalID: 1789388677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_54
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 111
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f12fc1e3ab5eec4aa88be3a74807ed3
+      internalID: 895892410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_55
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 109
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6447967b04c93374990961a9fee20273
+      internalID: 1842851660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_57
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 89
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18e948ffdaf3e6408b1e43c5f50c6a8
+      internalID: -529833292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_58
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 90
+        width: 4
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9fcca101329564f8490023caf02358
+      internalID: 1280786947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_59
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 101
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f049a3b514ff241aa1d5ca581af2b6
+      internalID: 1817180455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_61
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 42
+        width: 4
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f29b9c1e5610f4c880eb17dcb2ef4f
+      internalID: 831704966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_62
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 79
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced5a984f5efc954f96b1a6d63ea006b
+      internalID: 778488910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_63
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 67
+        width: 4
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894ec4e319ce1184f8cb07bb0c1e4f42
+      internalID: 1834339218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_64
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 46
+        width: 4
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b521a0b0d11fc5848a810ff1ef4dbc96
+      internalID: 1727405556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_65
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 74
+        width: 4
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6985ccca3400b37449af30e2a4e066d8
+      internalID: -1318473853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_68
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 57
+        width: 4
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f6c4c9d5bb7a04299e48ba1104c117
+      internalID: -1059502165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_71
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 54
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12803a3201c00374a8be1ab24381c49b
+      internalID: 384044867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_73
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 46
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c420d79203b3714eac45ca5ccd6ed50
+      internalID: 1480021712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_77
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 17
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c288695785541ff4da989e80950038a5
+      internalID: 273040316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_78
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 30
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692dd3b6ddabf9440934abeec8e6c7dc
+      internalID: -230385145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponTracer_81
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 3
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0705698a405c9d34db7cd46ce8fac7e0
+      internalID: -1359537461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 40020c7891330a04999f57152eba65d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WeaponTracer_0: 513396037
+      WeaponTracer_1: -643253623
+      WeaponTracer_10: -1740356330
+      WeaponTracer_11: -135509709
+      WeaponTracer_12: -418881865
+      WeaponTracer_13: -1959335772
+      WeaponTracer_14: -40964650
+      WeaponTracer_15: 31667352
+      WeaponTracer_16: -370598316
+      WeaponTracer_17: -175008689
+      WeaponTracer_18: 1535714631
+      WeaponTracer_19: -636492089
+      WeaponTracer_2: 1081217173
+      WeaponTracer_20: -17012725
+      WeaponTracer_21: 1446701546
+      WeaponTracer_22: 1372389262
+      WeaponTracer_23: -541040006
+      WeaponTracer_24: 1541043302
+      WeaponTracer_25: -2012148965
+      WeaponTracer_26: 457884418
+      WeaponTracer_27: -764443947
+      WeaponTracer_28: 1137275129
+      WeaponTracer_29: 2007974246
+      WeaponTracer_3: 1848868393
+      WeaponTracer_30: -73211088
+      WeaponTracer_31: -430890974
+      WeaponTracer_32: 2081359206
+      WeaponTracer_33: -587166136
+      WeaponTracer_34: 254619116
+      WeaponTracer_35: -508502897
+      WeaponTracer_36: -1304348454
+      WeaponTracer_37: 1229899396
+      WeaponTracer_38: 1708479049
+      WeaponTracer_39: 1162236224
+      WeaponTracer_4: 1629492179
+      WeaponTracer_40: 38188363
+      WeaponTracer_41: -336888929
+      WeaponTracer_42: 340028525
+      WeaponTracer_43: -1990487051
+      WeaponTracer_44: -417232284
+      WeaponTracer_45: -501382754
+      WeaponTracer_46: -363207291
+      WeaponTracer_47: 1380647168
+      WeaponTracer_48: 1193050612
+      WeaponTracer_49: 1771851509
+      WeaponTracer_5: 1712550132
+      WeaponTracer_50: 1950260545
+      WeaponTracer_51: -678390072
+      WeaponTracer_52: 1845190380
+      WeaponTracer_53: 1789388677
+      WeaponTracer_54: 895892410
+      WeaponTracer_55: 1842851660
+      WeaponTracer_56: 69654603
+      WeaponTracer_57: -529833292
+      WeaponTracer_58: 1280786947
+      WeaponTracer_59: 1817180455
+      WeaponTracer_6: 229063252
+      WeaponTracer_60: -1570617988
+      WeaponTracer_61: 831704966
+      WeaponTracer_62: 778488910
+      WeaponTracer_63: 1834339218
+      WeaponTracer_64: 1727405556
+      WeaponTracer_65: -1318473853
+      WeaponTracer_66: 2084946596
+      WeaponTracer_67: 719440985
+      WeaponTracer_68: -1059502165
+      WeaponTracer_69: 871245448
+      WeaponTracer_7: -618647124
+      WeaponTracer_70: -1696953432
+      WeaponTracer_71: 384044867
+      WeaponTracer_72: -1968861756
+      WeaponTracer_73: 1480021712
+      WeaponTracer_74: 1696449408
+      WeaponTracer_75: 1888563268
+      WeaponTracer_76: -1845796327
+      WeaponTracer_77: 273040316
+      WeaponTracer_78: -230385145
+      WeaponTracer_79: 2087691570
+      WeaponTracer_8: 1085065711
+      WeaponTracer_80: -1697263764
+      WeaponTracer_81: -1359537461
+      WeaponTracer_9: 1879897146
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
