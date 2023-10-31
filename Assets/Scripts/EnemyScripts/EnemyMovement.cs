@@ -11,6 +11,15 @@ public class EnemyMovement : MonoBehaviour
     public float stopDistance;
     public float horizontalMovement;
     public Animator animatorEnemy;
+    private EnemyHealth enemyHealthScript;
+
+    private void Start()
+    {
+        System.Random rand = new System.Random();
+        stopDistance = rand.Next(10, 16);
+        enemyHealthScript = GetComponent<EnemyHealth>();
+
+    }
 
     private void Update()
     {
@@ -23,14 +32,20 @@ public class EnemyMovement : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, target.transform.position);
 
-        if (horizontalMovement > 0)
+
+        if(enemyHealthScript.isDie == false)
         {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            if (horizontalMovement > 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (horizontalMovement < 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
         }
-        else if (horizontalMovement < 0)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
+
+        
 
         if (Mathf.Abs(target.position.x - transform.position.x) > stopDistance)
         {

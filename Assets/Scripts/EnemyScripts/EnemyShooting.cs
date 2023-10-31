@@ -12,11 +12,20 @@ public class EnemyShooting : MonoBehaviour
 
     private float timer;
     public Animator animatorEnemy;
+    private EnemyHealth enemyHealthScript;
+    private EnemyMovement enemyMovementScript;
+
+    private void Start()
+    {
+        enemyMovementScript = GetComponent<EnemyMovement>();
+        enemyHealthScript = GetComponent<EnemyHealth>();
+    }
+
     private void Update()
     {
 
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if(distance <= 12)
+        if(distance <= enemyMovementScript.stopDistance + 1)
         {
             enemySeePlayer = true;
             timer = timer + Time.deltaTime;
@@ -35,15 +44,19 @@ public class EnemyShooting : MonoBehaviour
 
     }
 
-    public void DoneShoot() //animation event
+    public void DoneShoot()
     {
         animatorEnemy.SetBool("isShooting", false);
     }
 
     public void EnemyShoot()
     {
-        Invoke("ShootBullet", 0.2f);
-        animatorEnemy.SetBool("isShooting", true);
+        if(enemyHealthScript.isDie == false)
+        {
+            Invoke("ShootBullet", 0.2f);
+            animatorEnemy.SetBool("isShooting", true);
+            Invoke("DoneShoot", 0.5f);
+        }
     }
 
     public void ShootBullet()
