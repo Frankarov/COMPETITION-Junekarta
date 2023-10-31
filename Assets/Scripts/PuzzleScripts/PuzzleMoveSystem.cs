@@ -1,60 +1,55 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 
-public class DragImage : MonoBehaviour
+public class PuzzleMoveSystem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public GameObject correctForm;
-    private bool moving;
-    private bool finish;
+    private RectTransform rectTrans;
+    public Canvas myCanvas;
+    private CanvasGroup canvasGroup;
+    public int id;
+    private Vector2 initPos;
 
-    private float startPosX;
-    private float startPosY;
-    private Vector3 resetPosition;
-
-    private void Start()
+    void Start()
     {
-        resetPosition = this.transform.localPosition;
+        rectTrans = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        initPos = transform.position;
+
     }
 
-    private void Update()
-    {
-        if (!finish && moving)
-        {
-            Vector2 mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, this.gameObject.transform.localPosition.z);
-        }
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+        //Debug.Log("BeginDrag");
+        canvasGroup.blocksRaycasts = false;
     }
 
-    private void OnMouseDown()
+    public void OnDrag(PointerEventData eventData)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y - this.transform.localPosition.y;
-
-            moving = true;
-        }
+        //throw new System.NotImplementedException();
+        rectTrans.anchoredPosition += eventData.delta / myCanvas.scaleFactor;
     }
 
-    private void OnMouseUp()
+    public void OnEndDrag(PointerEventData eventData)
     {
-        moving = false;
-
-        float distance = Vector3.Distance(this.transform.position, correctForm.transform.position);
-
-        if (distance <= 0.5f)
-        {
-            this.transform.position = correctForm.transform.position;
-            finish = true;
-        }
-        else
-        {
-            this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
-        }
+        canvasGroup.blocksRaycasts = true;
+        //throw new System.NotImplementedException();
+        //Debug.Log("EndDrag");
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+        //Debug.Log("Click");
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = initPos;
+    }
+
 }
