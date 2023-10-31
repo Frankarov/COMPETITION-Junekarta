@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__0
+      name: Layar laptop 1
       rect:
         serializedVersion: 2
         x: 993
@@ -118,7 +118,7 @@ TextureImporter:
         width: 89
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__1
+      name: Layar komputer 1
       rect:
         serializedVersion: 2
         x: 1133
@@ -139,7 +139,7 @@ TextureImporter:
         width: 216
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,15 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__2
+      name: hiasan kucing
       rect:
         serializedVersion: 2
         x: 1412
-        y: 1162
+        y: 1163
         width: 61
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__3
+      name: Komputer
       rect:
         serializedVersion: 2
         x: 159
@@ -181,7 +181,7 @@ TextureImporter:
         width: 304
         height: 181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__4
+      name: Mouse
       rect:
         serializedVersion: 2
         x: 508
@@ -202,7 +202,7 @@ TextureImporter:
         width: 25
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__5
+      name: Laptop
       rect:
         serializedVersion: 2
         x: 812
@@ -223,7 +223,7 @@ TextureImporter:
         width: 137
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,15 +236,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__6
+      name: Layar laptop 2
       rect:
         serializedVersion: 2
         x: 993
-        y: 1051
+        y: 1052
         width: 89
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__7
+      name: Layar komputer 2
       rect:
         serializedVersion: 2
         x: 1133
@@ -265,7 +265,7 @@ TextureImporter:
         width: 216
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__8
+      name: Keyboard
       rect:
         serializedVersion: 2
         x: 482
@@ -286,7 +286,7 @@ TextureImporter:
         width: 235
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__9
+      name: rak buku
       rect:
         serializedVersion: 2
         x: 5199
@@ -307,7 +307,7 @@ TextureImporter:
         width: 184
         height: 495
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__10
+      name: sticky notes 1
       rect:
         serializedVersion: 2
         x: 832
@@ -328,7 +328,7 @@ TextureImporter:
         width: 22
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__11
+      name: sticky notes 3
       rect:
         serializedVersion: 2
         x: 898
@@ -349,7 +349,7 @@ TextureImporter:
         width: 26
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__12
+      name: Layar laptop 3
       rect:
         serializedVersion: 2
         x: 993
@@ -370,7 +370,7 @@ TextureImporter:
         width: 89
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__13
+      name: sticky notes 2
       rect:
         serializedVersion: 2
         x: 857
@@ -391,7 +391,7 @@ TextureImporter:
         width: 25
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__14
+      name: sticky notes 4
       rect:
         serializedVersion: 2
         x: 892
@@ -412,7 +412,7 @@ TextureImporter:
         width: 22
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__15
+      name: bangku krem depan
       rect:
         serializedVersion: 2
         x: 1812
@@ -433,7 +433,7 @@ TextureImporter:
         width: 216
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__16
+      name: bangku krem belakang
       rect:
         serializedVersion: 2
         x: 2133
@@ -454,7 +454,7 @@ TextureImporter:
         width: 216
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__17
+      name: bangku krem kiri
       rect:
         serializedVersion: 2
         x: 2437
@@ -475,7 +475,7 @@ TextureImporter:
         width: 289
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__18
+      name: bangku krem kanan
       rect:
         serializedVersion: 2
         x: 2796
@@ -496,7 +496,7 @@ TextureImporter:
         width: 292
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__19
+      name: bangku putih depan
       rect:
         serializedVersion: 2
         x: 3174
@@ -517,7 +517,7 @@ TextureImporter:
         width: 212
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__20
+      name: bangku putih belakang
       rect:
         serializedVersion: 2
         x: 3491
@@ -538,7 +538,7 @@ TextureImporter:
         width: 216
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__21
+      name: bangku putih kiri
       rect:
         serializedVersion: 2
         x: 3796
@@ -559,7 +559,7 @@ TextureImporter:
         width: 292
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__22
+      name: bangku putih kanan
       rect:
         serializedVersion: 2
         x: 4151
@@ -580,7 +580,7 @@ TextureImporter:
         width: 292
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__23
+      name: rak folder
       rect:
         serializedVersion: 2
         x: 5437
@@ -601,7 +601,7 @@ TextureImporter:
         width: 165
         height: 413
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__24
+      name: sticky notes 5
       rect:
         serializedVersion: 2
         x: 847
@@ -622,7 +622,7 @@ TextureImporter:
         width: 19
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__25
+      name: sticky notes 6
       rect:
         serializedVersion: 2
         x: 882
@@ -643,7 +643,7 @@ TextureImporter:
         width: 26
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__26
+      name: Layar laptop 4
       rect:
         serializedVersion: 2
         x: 993
@@ -664,7 +664,7 @@ TextureImporter:
         width: 89
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__27
+      name: kursi pendek kanan
       rect:
         serializedVersion: 2
         x: 4558
@@ -685,7 +685,7 @@ TextureImporter:
         width: 244
         height: 299
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__28
+      name: kursi pendek kir
       rect:
         serializedVersion: 2
         x: 4878
@@ -706,7 +706,7 @@ TextureImporter:
         width: 245
         height: 299
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__29
+      name: bangku hijau depan
       rect:
         serializedVersion: 2
         x: 133
@@ -727,7 +727,7 @@ TextureImporter:
         width: 216
         height: 339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__30
+      name: bangku hijau belakang
       rect:
         serializedVersion: 2
         x: 533
@@ -748,7 +748,7 @@ TextureImporter:
         width: 216
         height: 339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__31
+      name: bangku hijau kiri
       rect:
         serializedVersion: 2
         x: 1003
@@ -769,7 +769,7 @@ TextureImporter:
         width: 289
         height: 339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__32
+      name: bangku hijau kanan
       rect:
         serializedVersion: 2
         x: 1403
@@ -790,7 +790,7 @@ TextureImporter:
         width: 289
         height: 339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -803,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__33
+      name: printer samping
       rect:
         serializedVersion: 2
         x: 1679
@@ -811,7 +811,7 @@ TextureImporter:
         width: 333
         height: 410
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,7 +824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__34
+      name: printer depan
       rect:
         serializedVersion: 2
         x: 2063
@@ -832,7 +832,7 @@ TextureImporter:
         width: 381
         height: 410
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__35
+      name: meja kantor depan
       rect:
         serializedVersion: 2
         x: 92
@@ -853,7 +853,7 @@ TextureImporter:
         width: 549
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__36
+      name: meja kantor samping
       rect:
         serializedVersion: 2
         x: 717
@@ -874,7 +874,7 @@ TextureImporter:
         width: 245
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +887,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__37
+      name: meja kantor belakang
       rect:
         serializedVersion: 2
         x: 1054
@@ -895,7 +895,7 @@ TextureImporter:
         width: 549
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__38
+      name: sofa kanan
       rect:
         serializedVersion: 2
         x: 2558
@@ -916,7 +916,7 @@ TextureImporter:
         width: 244
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -929,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__39
+      name: sofa kiri
       rect:
         serializedVersion: 2
         x: 2879
@@ -937,7 +937,7 @@ TextureImporter:
         width: 244
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -950,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__40
+      name: sofa panjang
       rect:
         serializedVersion: 2
         x: 3196
@@ -958,7 +958,7 @@ TextureImporter:
         width: 727
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__41
+      name: meja kantor
       rect:
         serializedVersion: 2
         x: 4078
@@ -979,7 +979,7 @@ TextureImporter:
         width: 486
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__42
+      name: meja kanto
       rect:
         serializedVersion: 2
         x: 4637
@@ -1000,7 +1000,7 @@ TextureImporter:
         width: 244
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1013,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__43
+      name: meja bulat
       rect:
         serializedVersion: 2
         x: 4958
@@ -1021,7 +1021,7 @@ TextureImporter:
         width: 244
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__44
+      name: dispenser
       rect:
         serializedVersion: 2
         x: 5278
@@ -1042,7 +1042,7 @@ TextureImporter:
         width: 165
         height: 407
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1055,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Asset_Kantor_500__45
+      name: meja bos
       rect:
         serializedVersion: 2
         x: 5516
@@ -1063,7 +1063,7 @@ TextureImporter:
         width: 486
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1086,52 +1086,52 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      All_Asset_Kantor_500__0: 1709461510
-      All_Asset_Kantor_500__1: 1258288065
-      All_Asset_Kantor_500__10: 1621540222
-      All_Asset_Kantor_500__11: 1000314353
-      All_Asset_Kantor_500__12: 33450674
-      All_Asset_Kantor_500__13: -1270990489
-      All_Asset_Kantor_500__14: 2131765619
-      All_Asset_Kantor_500__15: -1870063766
-      All_Asset_Kantor_500__16: 1023167750
-      All_Asset_Kantor_500__17: 978812553
-      All_Asset_Kantor_500__18: -1145682175
-      All_Asset_Kantor_500__19: 1655443599
-      All_Asset_Kantor_500__2: -757906081
-      All_Asset_Kantor_500__20: -1329212133
-      All_Asset_Kantor_500__21: 1063230494
-      All_Asset_Kantor_500__22: 1855619284
-      All_Asset_Kantor_500__23: -1786291513
-      All_Asset_Kantor_500__24: -2076530785
-      All_Asset_Kantor_500__25: -1985108009
-      All_Asset_Kantor_500__26: -881554645
-      All_Asset_Kantor_500__27: 824105993
-      All_Asset_Kantor_500__28: 43634856
-      All_Asset_Kantor_500__29: 1175022373
-      All_Asset_Kantor_500__3: 625829815
-      All_Asset_Kantor_500__30: -390645533
-      All_Asset_Kantor_500__31: -138181009
-      All_Asset_Kantor_500__32: -1159533179
-      All_Asset_Kantor_500__33: 1028711198
-      All_Asset_Kantor_500__34: -1180198525
-      All_Asset_Kantor_500__35: -464548135
-      All_Asset_Kantor_500__36: -2032937861
-      All_Asset_Kantor_500__37: 1859336900
-      All_Asset_Kantor_500__38: -182561966
-      All_Asset_Kantor_500__39: -1255160932
-      All_Asset_Kantor_500__4: 148933
-      All_Asset_Kantor_500__40: 1611431514
-      All_Asset_Kantor_500__41: 305369455
-      All_Asset_Kantor_500__42: 658294777
-      All_Asset_Kantor_500__43: 2046875474
-      All_Asset_Kantor_500__44: -305252761
-      All_Asset_Kantor_500__45: 29317390
-      All_Asset_Kantor_500__5: -1944320236
-      All_Asset_Kantor_500__6: 1694017795
-      All_Asset_Kantor_500__7: 1329410957
-      All_Asset_Kantor_500__8: 1571040111
-      All_Asset_Kantor_500__9: 498325566
+      Keyboard: 1571040111
+      Komputer: 625829815
+      Laptop: -1944320236
+      Layar komputer 1: 1258288065
+      Layar komputer 2: 1329410957
+      Layar laptop 1: 1709461510
+      Layar laptop 2: 1694017795
+      Layar laptop 3: 33450674
+      Layar laptop 4: -881554645
+      Mouse: 148933
+      bangku hijau belakang: -390645533
+      bangku hijau depan: 1175022373
+      bangku hijau kanan: -1159533179
+      bangku hijau kiri: -138181009
+      bangku krem belakang: 1023167750
+      bangku krem depan: -1870063766
+      bangku krem kanan: -1145682175
+      bangku krem kiri: 978812553
+      bangku putih belakang: -1329212133
+      bangku putih depan: 1655443599
+      bangku putih kanan: 1855619284
+      bangku putih kiri: 1063230494
+      dispenser: -305252761
+      hiasan kucing: -757906081
+      kursi pendek kanan: 824105993
+      kursi pendek kir: 43634856
+      meja bos: 29317390
+      meja bulat: 2046875474
+      meja kanto: 658294777
+      meja kantor: 305369455
+      meja kantor belakang: 1859336900
+      meja kantor depan: -464548135
+      meja kantor samping: -2032937861
+      printer depan: -1180198525
+      printer samping: 1028711198
+      rak buku: 498325566
+      rak folder: -1786291513
+      sofa kanan: -182561966
+      sofa kiri: -1255160932
+      sofa panjang: 1611431514
+      sticky notes 1: 1621540222
+      sticky notes 2: -1270990489
+      sticky notes 3: 1000314353
+      sticky notes 4: 2131765619
+      sticky notes 5: -2076530785
+      sticky notes 6: -1985108009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
