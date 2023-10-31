@@ -45,6 +45,7 @@ public class Shooting : MonoBehaviour
 
             UtilsClass.ShakeCamera(0.05f, 0.15f);
             MekanikTembak();
+            MekanikHeadshot();
         }
     }
 
@@ -52,15 +53,32 @@ public class Shooting : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
             EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
+            EnemyHeadshot enemyKepala = hit.collider.GetComponent<EnemyHeadshot>();
             if (enemy != null)
             {
-                enemy.TakeDamage(10); 
+                Debug.Log("Enemy found!");
+                enemy.TakeDamage(10);
             }
         }
 
+    }
+
+    private void MekanikHeadshot()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+        if (hit.collider != null)
+        {
+            EnemyHeadshot enemyKepala = hit.collider.GetComponent<EnemyHeadshot>();
+            if (enemyKepala != null)
+            {
+                Debug.Log("EnemyKepala found");
+                enemyKepala.HeadshotExecute();
+            }
+        }
     }
 
 
