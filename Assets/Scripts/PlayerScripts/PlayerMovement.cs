@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource audioJalan;
 
     private bool canDash = true;
-    private bool isDash = false;
+    public bool isDash = false;
     [SerializeField]
     private float dashingPower = 7f;
     [SerializeField]
@@ -22,12 +22,17 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 1f;
     public Animator animatorPlayer;
 
-    public GameObject[] offPartRolled;
+    public BoxCollider2D colliderPlayer;
 
+    public GameObject[] offPartRolled;
+    private Shooting shootingScript;
+    
+ 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        shootingScript = GetComponent<Shooting>();
     }
 
     private void FixedUpdate()
@@ -68,50 +73,47 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        Debug.Log("Dash!");
         isDash = true;
         canDash = false;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        
+
         Vector3 dashDirection = mousePos - transform.position;
         dashDirection.Normalize();
 
         rb.velocity = dashDirection * dashingPower;
-        animatorPlayer.SetBool("isRolling", true);
-        foreach(GameObject obj in offPartRolled)
-        {
-            obj.SetActive(false);
-        }
+        colliderPlayer.enabled = false;
+        animatorPlayer.SetTrigger("isRolling");
+        animatorPlayer.SetBool("rollingActive",true);
+        Invoke("TurnOffBadan", 0.2f);
+        shootingScript.canShoot = false;
 
-        yield return new WaitForSeconds(dashingTime + 0.3f);
 
+        yield return new WaitForSeconds(dashingTime); //
+        shootingScript.canShoot = true;
+        colliderPlayer.enabled = true;
         rb.velocity = Vector2.zero;
-        animatorPlayer.SetBool("isRolling", false);
+        animatorPlayer.SetBool("rollingActive", false);
         foreach (GameObject obj in offPartRolled)
         {
             obj.SetActive(true);
         }
 
-        yield return new WaitForSeconds(dashingCooldown);
+        yield return new WaitForSeconds(dashingCooldown); //
 
         canDash = true;
         isDash = false;
     }
 
-    private IEnumerator temptemp()
+    private void TurnOffBadan() 
     {
-        canDash = false;
-        isDash = true;
-        //rb.gravityScale = 0;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        yield return new WaitForSeconds(dashingTime);
-        //rb.gravityScale = 1;
-        isDash = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-
-
-        
+        foreach (GameObject obj in offPartRolled)
+        {
+            obj.SetActive(false);
+        }
     }
 
 }

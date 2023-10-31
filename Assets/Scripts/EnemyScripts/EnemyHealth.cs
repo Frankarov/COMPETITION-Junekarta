@@ -19,10 +19,10 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
-        if(currentHP < 0 && !headshotted)
+        if(currentHP <= 0 && !headshotted)
         {
             Die();
-        }else if(currentHP < 0 && headshotted)
+        }else if(currentHP <= 0 && headshotted)
         {
             DieHeadshot();
         }

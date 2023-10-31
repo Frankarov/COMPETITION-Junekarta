@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviour
     public Transform aimTransform;
     private Transform aimGunEndPointTransform;
     private GameObject aimGunEndPointObject;
+    private PlayerMovement playerMovementScript;
 
     public bool canShoot = true;
 
@@ -25,6 +26,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         canShoot = true;
+        playerMovementScript = GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -32,6 +34,7 @@ public class Shooting : MonoBehaviour
 
         aimGunEndPointObject = GameObject.Find("GunEndPointPosition");
         aimGunEndPointTransform = aimGunEndPointObject.transform;
+
 
         if (Input.GetMouseButtonDown(0) && canShoot)
         {

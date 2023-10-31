@@ -416,6 +416,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: MC_Roll_Depan_Spirtesitt_0
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 87
+        width: 150
+        height: 295
+      alignment: 9
+      pivot: {x: 0.3544617, y: 0.2247825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c924e1c260e59147bac6a6b4fe7e48b
+      internalID: -152853685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 15
+      rect:
+        serializedVersion: 2
+        x: 8112
+        y: 99
+        width: 146
+        height: 272
+      alignment: 9
+      pivot: {x: 0.3910832, y: 0.18547378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea89213064eaec74996cfadb06c58254
+      internalID: -2018949168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 16
+      rect:
+        serializedVersion: 2
+        x: 8617
+        y: 99
+        width: 142
+        height: 284
+      alignment: 9
+      pivot: {x: 0.3910832, y: 0.1854738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa558f46dba7aa4d99435804ab411f5
+      internalID: 1440188812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -433,6 +496,8 @@ TextureImporter:
       12: 264149982
       13: 1607175067
       14: 819004815
+      15: -2018949168
+      16: 1440188812
       2: -1072350671
       3: 1220494786
       4: 1208135803
@@ -442,7 +507,6 @@ TextureImporter:
       8: -1688519620
       9: 1822939049
       MC_Roll_Depan_Spirtesitt_0: -152853685
-      MC_Roll_Depan_Spirtesitt_1: -2018949168
       MC_Roll_Depan_Spirtesitt_10: 1656860604
       MC_Roll_Depan_Spirtesitt_11: 127500513
       MC_Roll_Depan_Spirtesitt_16: 166113515
