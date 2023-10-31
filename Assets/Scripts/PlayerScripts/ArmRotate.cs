@@ -12,6 +12,7 @@ public class ArmRotate : MonoBehaviour
     public SpriteRenderer headPlayer;
     public SpriteRenderer innerArmPlayer;
     public SpriteRenderer outerArmPlayer;
+    public SpriteRenderer kakiPlayer;
     float rotationZ;
 
     private void Update()
@@ -53,6 +54,7 @@ public class ArmRotate : MonoBehaviour
             headPlayer.flipX = true;
             outerArmPlayer.flipX = true;
             innerArmPlayer.flipX = true;
+            kakiPlayer.flipX = true;
             transform.localScale = new Vector3(-1, 1, 1);
 
             cameraTransform.Translate(Vector3.left * 50 * Time.deltaTime);
@@ -63,6 +65,7 @@ public class ArmRotate : MonoBehaviour
             headPlayer.flipX = false;
             outerArmPlayer.flipX = false;
             innerArmPlayer.flipX = false;
+            kakiPlayer.flipX = false;
             transform.localScale = new Vector3(1, 1, 1);
             cameraTransform.Translate(Vector3.right * 15 * Time.deltaTime);
         }
