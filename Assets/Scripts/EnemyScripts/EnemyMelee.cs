@@ -17,6 +17,8 @@ public class EnemyMelee : MonoBehaviour
     private float cooldownTimer;
     public float cooldownDuration;
 
+    public Animator animatorMelee;
+
     private void Update()
     {
 
@@ -40,8 +42,8 @@ public class EnemyMelee : MonoBehaviour
                     timer += Time.deltaTime;
                     if(timer > meleeActivation)
                     {
+                        animatorMelee.SetBool("isMelee", false);
                         isMelee = false;
-                        swing.SetActive(false);
                         cooldownTimer = cooldownDuration;
                     }
                 }
@@ -55,11 +57,22 @@ public class EnemyMelee : MonoBehaviour
     }
     private void meleeAttack()
     {
-        swing.SetActive(true);
-        isMelee = true;
+        animatorMelee.SetBool("isMelee", true);
         timer = 0f;
     }
 
+    public void AnimEventSwingTrue()
+    {
+        swing.SetActive(true);
+        isMelee = true;
+    }
+
+    public void AnimEventSwingFalse()
+    {
+        swing.SetActive(false);
+        isMelee = false;
+        animatorMelee.SetBool("isMelee", false);
+    }
 
 
 

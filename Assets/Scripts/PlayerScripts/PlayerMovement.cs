@@ -21,12 +21,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float dashingCooldown = 1f;
     public Animator animatorPlayer;
+    public Animator animatorRoll;
 
     public BoxCollider2D colliderPlayer;
 
     public GameObject[] offPartRolled;
     private Shooting shootingScript;
-    
+    public SpriteRenderer playerRoll;
  
 
     private void Start()
@@ -78,29 +79,28 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        
-
         Vector3 dashDirection = mousePos - transform.position;
         dashDirection.Normalize();
-
         rb.velocity = dashDirection * dashingPower;
         colliderPlayer.enabled = false;
-        animatorPlayer.SetTrigger("isRolling");
-        animatorPlayer.SetBool("rollingActive",true);
-        Invoke("TurnOffBadan", 0.2f);
-        shootingScript.canShoot = false;
 
+
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        animatorRoll.SetBool("isRolling",true);
+
+        shootingScript.canShoot = false;
+        foreach (GameObject obj in offPartRolled)
+        {
+            obj.SetActive(false);
+        }
+
+        playerRoll.enabled = true;
 
         yield return new WaitForSeconds(dashingTime); //
         shootingScript.canShoot = true;
         colliderPlayer.enabled = true;
         rb.velocity = Vector2.zero;
-        animatorPlayer.SetBool("rollingActive", false);
-        foreach (GameObject obj in offPartRolled)
-        {
-            obj.SetActive(true);
-        }
+
 
         yield return new WaitForSeconds(dashingCooldown); //
 
@@ -108,12 +108,5 @@ public class PlayerMovement : MonoBehaviour
         isDash = false;
     }
 
-    private void TurnOffBadan() 
-    {
-        foreach (GameObject obj in offPartRolled)
-        {
-            obj.SetActive(false);
-        }
-    }
 
 }

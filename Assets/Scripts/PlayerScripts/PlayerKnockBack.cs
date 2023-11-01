@@ -14,7 +14,7 @@ public class PlayerKnockBack : MonoBehaviour
 
     public SpriteRenderer player;
     public Shooting shootingScript;
-
+    public PlayerStat playerStatScript;
     private void Update()
     {
         if (isKnockedBack && Time.time - knockbackStartTime > knockbackDuration)
@@ -32,7 +32,7 @@ public class PlayerKnockBack : MonoBehaviour
 
     public void KnockKanan()
     {
-        if (!isKnockedBack)
+        if (!isKnockedBack && playerStatScript.isDie == false)
         {
             Debug.Log("EksekusiKnockbackPlayerKanan");
             knockbackDirection = (transform.position - gameObject.transform.position).normalized;
@@ -40,13 +40,15 @@ public class PlayerKnockBack : MonoBehaviour
             knockbackStartTime = Time.time;
             rb.AddForce(Vector2.one * knockbackForce, ForceMode2D.Impulse);
             shootingScript.canShoot = false;
+            playerStatScript.TakeDamage(30);
+
 
         }
     }
 
     public void KnockKiri()
     {
-        if (!isKnockedBack)
+        if (!isKnockedBack && playerStatScript.isDie == false)
         {
             Debug.Log("EksekusiKnockbackPlayerKiri");
             knockbackDirection = (transform.position - gameObject.transform.position).normalized;
