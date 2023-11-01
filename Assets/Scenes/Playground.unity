@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &238848306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   animatorEnemy: {fileID: 238848312}
   headshotted: 0
   isDie: 0
+  bosMerah: 0
 --- !u!212 &238848307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2175,7 +2176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealthScript: {fileID: 1948208546}
-  damageHeadshot: 2
+  damageHeadshot: 0
 --- !u!61 &1854486940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2330,7 +2331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1948208541
 Rigidbody2D:
   serializedVersion: 4
@@ -2411,10 +2412,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 817100391}
   movementSpeed: 2
-  stopDistance: 2
+  stopDistance: 0
   horizontalMovement: 0
   animatorEnemy: {fileID: 1948208542}
-  distanceStop: 0300000005000000
+  distanceStop: 0200000003000000
 --- !u!61 &1948208545
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2472,11 +2473,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5334e2b9d86a5654eb3c06ad2009f455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 30
   currentHP: 0
   animatorEnemy: {fileID: 1948208542}
   headshotted: 0
   isDie: 0
+  bosMerah: 1
 --- !u!212 &1948208547
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class RollingFalse : MonoBehaviour
         //animatorPlayer.SetTrigger("isRollingFalse");
         //animatorPlayer.SetBool("rollingActive",false);
         animatorRoll.SetBool("isRolling", false);
-        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         playerRoll.enabled = false;
         foreach (GameObject obj in gameObjectOn)
         {

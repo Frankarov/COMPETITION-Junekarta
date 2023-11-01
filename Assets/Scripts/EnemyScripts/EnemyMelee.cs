@@ -18,6 +18,12 @@ public class EnemyMelee : MonoBehaviour
     public float cooldownDuration;
 
     public Animator animatorMelee;
+    private BoxCollider2D colliderEnemy;
+
+    private void Start()
+    {
+        colliderEnemy = GetComponent<BoxCollider2D>();
+    }
 
     private void Update()
     {
@@ -59,6 +65,17 @@ public class EnemyMelee : MonoBehaviour
     {
         animatorMelee.SetBool("isMelee", true);
         timer = 0f;
+        
+    }
+
+    public void AnimEventColliderBosMerahOff()
+    {
+        colliderEnemy.enabled = false;
+    }
+
+    public void AnimEventColliderBosMerahOn()
+    {
+        colliderEnemy.enabled = true;
     }
 
     public void AnimEventSwingTrue()

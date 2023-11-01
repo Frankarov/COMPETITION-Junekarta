@@ -24,15 +24,13 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        
-        Vector3 direction = (target.position - transform.position).normalized;
-        horizontalMovement = direction.x * movementSpeed * Time.deltaTime;
-
-        float distance = Vector2.Distance(transform.position, target.transform.position);
-
-
-        if(enemyHealthScript.isDie == false)
+        if (enemyHealthScript.isDie == false)
         {
+            Vector3 direction = (target.position - transform.position).normalized;
+            horizontalMovement = direction.x * movementSpeed * Time.deltaTime;
+
+            float distance = Vector2.Distance(transform.position, target.transform.position);
+
             if (horizontalMovement > 0)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -41,25 +39,20 @@ public class EnemyMovement : MonoBehaviour
             {
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-        }
 
+            if (Mathf.Abs(target.position.x - transform.position.x) > stopDistance)
+            {
+
+                transform.Translate(new Vector3(horizontalMovement, 0, 0));
+                animatorEnemy.SetBool("isMoving", true);
+            }
+            else
+            {
+                animatorEnemy.SetBool("isMoving", false);
+            }
         
 
-        if (Mathf.Abs(target.position.x - transform.position.x) > stopDistance)
-        {
-
-            transform.Translate(new Vector3(horizontalMovement, 0, 0));
-            animatorEnemy.SetBool("isMoving", true);
         }
-        else
-        {
-            animatorEnemy.SetBool("isMoving", false);
-        }
-        
-
-
-
-
 
     }
 

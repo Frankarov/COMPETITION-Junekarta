@@ -12,6 +12,9 @@ public class EnemyHealth : MonoBehaviour
     public bool headshotted;
     public bool isDie;
 
+    [SerializeField]
+    private bool bosMerah;
+
     private void Start()
     {
         currentHP = maxHP;
@@ -24,8 +27,27 @@ public class EnemyHealth : MonoBehaviour
             Die();
         }else if(currentHP <= 0 && headshotted)
         {
-            DieHeadshot();
+            if (bosMerah)
+            {
+                Die();
+            }
+            else
+            {
+                DieHeadshot();
+            }
+            
         }
+
+        if (bosMerah && headshotted)
+        {
+            headshotted = false;
+            animatorEnemy.SetBool("isHittedHeadshot", true);
+        }
+    }
+
+    public void BosMerahTutupAnimHeadshot()
+    {
+        animatorEnemy.SetBool("isHittedHeadshot", false);
     }
 
     private void DieHeadshot()
