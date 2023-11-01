@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc7d23b9119d26242b6b6a7ff0b164e1
+guid: 611ad3cbb8ace1f4189261936436b325
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Anak_Senja_1000_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 1280
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35adb81ad2e42c843bf920ffed1db35f
+      internalID: 1062864563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anak_Senja_1000_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 452
+        width: 1280
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b154ef0de2429041bbf42838909bf9d
+      internalID: 997289132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anak_Senja_1000_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 763
+        width: 1280
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbc613b137f1954a8834fbe6029561d
+      internalID: 2066354332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anak_Senja_1000_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1103
+        width: 1280
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c8bffc45b1a584aafc1bc31f37bc69
+      internalID: -1615555112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Anak_Senja_1000_0: 1062864563
+      Anak_Senja_1000_1: 997289132
+      Anak_Senja_1000_2: 2066354332
+      Anak_Senja_1000_3: -1615555112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
