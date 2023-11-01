@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyHeadshot : MonoBehaviour
 {
     public EnemyHealth enemyHealthScript;
+    public int damageHeadshot;
     public void HeadshotExecute()
     {
         Debug.Log("HeadshotExecute");
         enemyHealthScript.headshotted = true;
-        enemyHealthScript.TakeDamage(150);
+        enemyHealthScript.TakeDamage(damageHeadshot);
     }
 
 }

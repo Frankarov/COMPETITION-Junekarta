@@ -12,11 +12,12 @@ public class EnemyMovement : MonoBehaviour
     public float horizontalMovement;
     public Animator animatorEnemy;
     private EnemyHealth enemyHealthScript;
+    public int[] distanceStop;
 
     private void Start()
     {
         System.Random rand = new System.Random();
-        stopDistance = rand.Next(10, 16);
+        stopDistance = rand.Next(distanceStop[0], distanceStop[1]);
         enemyHealthScript = GetComponent<EnemyHealth>();
 
     }
@@ -26,9 +27,6 @@ public class EnemyMovement : MonoBehaviour
         
         Vector3 direction = (target.position - transform.position).normalized;
         horizontalMovement = direction.x * movementSpeed * Time.deltaTime;
-
-        //bool isMoving = Mathf.Abs(horizontalMovement) > 0f;
-        //animatorEnemy.SetBool("isMoving", isMoving);
 
         float distance = Vector2.Distance(transform.position, target.transform.position);
 
@@ -52,8 +50,6 @@ public class EnemyMovement : MonoBehaviour
 
             transform.Translate(new Vector3(horizontalMovement, 0, 0));
             animatorEnemy.SetBool("isMoving", true);
-
-
         }
         else
         {
