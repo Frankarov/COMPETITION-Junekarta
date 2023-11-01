@@ -46,7 +46,7 @@ public class EnemyMelee : MonoBehaviour
                 else
                 {
                     timer += Time.deltaTime;
-                    if(timer > meleeActivation)
+                    if(timer > cooldownDuration)
                     {
                         animatorMelee.SetBool("isMelee", false);
                         isMelee = false;

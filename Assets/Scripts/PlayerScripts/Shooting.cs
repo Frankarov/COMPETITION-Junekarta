@@ -15,6 +15,9 @@ public class Shooting : MonoBehaviour
     private GameObject aimGunEndPointObject;
     private PlayerMovement playerMovementScript;
 
+    [SerializeField]
+    private int bulletCount = 17;
+    private bool isReloading = false;
     public bool canShoot = true;
 
     public class OnShootEventArgs : EventArgs
@@ -31,25 +34,49 @@ public class Shooting : MonoBehaviour
 
     private void Update()
     {
+        // ... (existing code)
 
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
+        {
+            StartCoroutine(ReloadProcess(2f)); // Trigger reload for 2 seconds
+        }
+
+        if (Input.GetMouseButtonDown(0) && canShoot && bulletCount > 0 && !isReloading)
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        Debug.Log("Tembak");
         aimGunEndPointObject = GameObject.Find("GunEndPointPosition");
         aimGunEndPointTransform = aimGunEndPointObject.transform;
+        bulletCount--;
 
-
-        if (Input.GetMouseButtonDown(0) && canShoot)
+        Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
+        OnShoot?.Invoke(this, new OnShootEventArgs
         {
-            Debug.Log("Tembak");
-            Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
-            OnShoot?.Invoke(this, new OnShootEventArgs
-            {
-                gunEndPointPosition = aimGunEndPointTransform.position,
-                shootPosition = mousePosition,
-            });
+            gunEndPointPosition = aimGunEndPointTransform.position,
+            shootPosition = mousePosition,
+        });
 
-            UtilsClass.ShakeCamera(0.05f, 0.15f);
-            MekanikTembak();
-            MekanikHeadshot();
-        }
+        UtilsClass.ShakeCamera(0.05f, 0.15f);
+        MekanikTembak();
+        MekanikHeadshot();
+    }
+
+    private IEnumerator ReloadProcess(float reloadTime)
+    {
+        isReloading = true;
+        Debug.Log("Reloading...");
+
+        yield return new WaitForSeconds(reloadTime);
+
+        bulletCount = 17;
+
+        isReloading = false;
+        Debug.Log("Reloaded!");
     }
 
     private void MekanikTembak()

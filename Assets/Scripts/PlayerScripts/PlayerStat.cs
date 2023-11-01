@@ -50,11 +50,23 @@ public class PlayerStat : MonoBehaviour
         Debug.Log("PlayerTakeDamage");
         currentHP -= damage;
         animatorHit.SetBool("KenaHit", true);
+        Invoke("GaransiTurnOffHit", 0.15f);
         playerKenaHit.enabled = true;
         shootingScript.canShoot = false;
         foreach (GameObject player in gameObjectOff)
         {
             player.SetActive(false);
+        }
+    }
+
+    private void GaransiTurnOffHit()
+    {
+        animatorHit.SetBool("KenaHit", false);
+        playerKenaHit.enabled = false;
+        shootingScript.canShoot = true;
+        foreach (GameObject player in gameObjectOff)
+        {
+            player.SetActive(true);
         }
     }
 

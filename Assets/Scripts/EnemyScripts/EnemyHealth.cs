@@ -15,9 +15,22 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private bool bosMerah;
 
+    [SerializeField]
+    private bool tank;
+
+    private EnemyMelee enemyMeleeScript;
+    private EnemyShooting enemyShootingScript;
+    private EnemyMovement enemyMovementScript;
+
     private void Start()
     {
         currentHP = maxHP;
+        if (tank)
+        {
+            enemyMeleeScript = GetComponent<EnemyMelee>();
+            enemyShootingScript = GetComponent<EnemyShooting>();
+            enemyMovementScript = GetComponent<EnemyMovement>();
+        }
     }
 
     private void Update()
@@ -27,7 +40,7 @@ public class EnemyHealth : MonoBehaviour
             Die();
         }else if(currentHP <= 0 && headshotted)
         {
-            if (bosMerah)
+            if (bosMerah || tank)
             {
                 Die();
             }
@@ -38,7 +51,16 @@ public class EnemyHealth : MonoBehaviour
             
         }
 
-        if (bosMerah && headshotted)
+        if(tank && currentHP <= 30)
+        {
+            enemyShootingScript.enabled = false;
+            enemyMeleeScript.enabled = true;
+            enemyMovementScript.stopDistance = 2;
+            animatorEnemy.SetBool("meleePhase", true);
+        }
+
+
+        if (tank || bosMerah && headshotted)
         {
             headshotted = false;
             animatorEnemy.SetBool("isHittedHeadshot", true);
