@@ -10028,8 +10028,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -17.920849, y: -3.6629505, z: 0}
-    m_Extent: {x: 27.67075, y: 12.57555, z: 0}
+    m_Center: {x: -17.918749, y: -3.6616998, z: 0}
+    m_Extent: {x: 27.67185, y: 12.5706005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11775,7 +11775,7 @@ Transform:
   m_GameObject: {fileID: 410481141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.76, y: 82.8, z: 0.065418996}
+  m_LocalPosition: {x: 49.76, y: 2.4, z: 0.065418996}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11792,6 +11792,7 @@ Transform:
   - {fileID: 1510936048}
   - {fileID: 352505944}
   - {fileID: 182501985}
+  - {fileID: 638808895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418166293
@@ -14614,7 +14615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8a65fb63de0b64fad5adcd83156e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 410481153}
   swing: {fileID: 444025453}
   meleeDuration: 1.3
   meleeActivation: 5
@@ -14632,7 +14633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00db7b744231adc44b94fb4fd053880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 410481153}
   movementSpeed: 2
   stopDistance: 0
   horizontalMovement: 0
@@ -14650,7 +14651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5334e2b9d86a5654eb3c06ad2009f455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 200
   currentHP: 0
   animatorEnemy: {fileID: 576043128}
   headshotted: 0
@@ -15623,6 +15624,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &638808894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638808895}
+  m_Layer: 0
+  m_Name: Pion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &638808895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638808894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 410481153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639535500
 GameObject:
   m_ObjectHideFlags: 0
@@ -16629,8 +16661,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -2.50415, y: 2.3644998, z: 0}
-    m_Extent: {x: 6.00055, y: 8.0011, z: 0}
+    m_Center: {x: -2.49915, y: 2.3674998, z: 0}
+    m_Extent: {x: 5.99185, y: 8.005899, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -16795,8 +16827,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -17.92125, y: -3.66085, z: 0}
-    m_Extent: {x: 27.670849, y: 12.571449, z: 0}
+    m_Center: {x: -17.9152, y: -3.66195, z: 0}
+    m_Extent: {x: 27.6688, y: 12.57315, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19678,8 +19710,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.758
   m_LocalBounds:
-    m_Center: {x: -27.40225, y: 0.6603503, z: 0}
-    m_Extent: {x: 13.579649, y: 8.725349, z: 0}
+    m_Center: {x: -27.40365, y: 0.65680027, z: 0}
+    m_Extent: {x: 13.58745, y: 8.7234, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20861,8 +20893,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6977501, y: -3.5652502, z: 0}
-    m_Extent: {x: 5.00285, y: 7.50315, z: 0}
+    m_Center: {x: 0.7021501, y: -3.5573, z: 0}
+    m_Extent: {x: 4.9973497, y: 7.5048003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -32567,8 +32599,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.758
   m_LocalBounds:
-    m_Center: {x: -27.400349, y: 0.67260027, z: 0}
-    m_Extent: {x: 13.58395, y: 8.7251, z: 0}
+    m_Center: {x: -27.40595, y: 0.66120005, z: 0}
+    m_Extent: {x: 13.575251, y: 8.7183, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -37679,8 +37711,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -17.9262, y: -4.06065, z: 0}
-    m_Extent: {x: 23.9999, y: 8.498651, z: 0}
+    m_Center: {x: -17.9246, y: -4.0564003, z: 0}
+    m_Extent: {x: 23.9937, y: 8.502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -38042,8 +38074,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.6983001, y: -3.5588999, z: 0}
-    m_Extent: {x: 4.9921, y: 7.5046997, z: 0}
+    m_Center: {x: 0.69605017, y: -3.55815, z: 0}
+    m_Extent: {x: 4.99685, y: 7.4980497, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -38227,7 +38259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5526625693662435581, guid: d07f7582e61e242478567158edff23cd, type: 3}
   bulletPosition: {fileID: 1969958640}
-  player: {fileID: 0}
+  player: {fileID: 410481141}
   enemySeePlayer: 0
   distance: 0
   animatorEnemy: {fileID: 1690010687}
@@ -38243,7 +38275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00db7b744231adc44b94fb4fd053880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 410481153}
   movementSpeed: 2
   stopDistance: 11
   horizontalMovement: 0
@@ -40419,7 +40451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5526625693662435581, guid: d07f7582e61e242478567158edff23cd, type: 3}
   bulletPosition: {fileID: 1740466688}
-  player: {fileID: 0}
+  player: {fileID: 410481141}
   enemySeePlayer: 0
   distance: 0
   animatorEnemy: {fileID: 1755638423}
@@ -40435,7 +40467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8a65fb63de0b64fad5adcd83156e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 410481153}
   swing: {fileID: 1203331911}
   meleeDuration: 2
   meleeActivation: 5
@@ -40453,7 +40485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00db7b744231adc44b94fb4fd053880a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 410481153}
   movementSpeed: 2
   stopDistance: 0
   horizontalMovement: 0
@@ -40471,7 +40503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5334e2b9d86a5654eb3c06ad2009f455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 500
   currentHP: 0
   animatorEnemy: {fileID: 1755638423}
   headshotted: 0
@@ -49978,8 +50010,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.69735, y: -3.5628, z: 0}
-    m_Extent: {x: 5.00595, y: 7.5065, z: 0}
+    m_Center: {x: 0.6928501, y: -3.55935, z: 0}
+    m_Extent: {x: 4.99895, y: 7.5036497, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
