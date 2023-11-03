@@ -22,8 +22,8 @@ public class LiftUI : MonoBehaviour
 
     private void Update()
     {
-        keycard3 = PlayerPrefs.GetInt("KeyardLantai3");
-        keycard4 = PlayerPrefs.GetInt("KeyardLantai4");
+        keycard3 = PlayerPrefs.GetInt("KeycardLantai3");
+        keycard4 = PlayerPrefs.GetInt("KeycardLantai4");
 
 
 

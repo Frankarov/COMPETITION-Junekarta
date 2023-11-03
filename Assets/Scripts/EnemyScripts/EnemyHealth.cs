@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField]
     private bool bosMerah;
+    [SerializeField]
+    private bool bosMerahSpecial;
 
     [SerializeField]
     private bool tank;
@@ -21,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
     private EnemyMelee enemyMeleeScript;
     private EnemyShooting enemyShootingScript;
     private EnemyMovement enemyMovementScript;
+    public AudioSource audioBosKeycard;
+    public GameObject keycardText;
 
     private void Start()
     {
@@ -31,6 +35,13 @@ public class EnemyHealth : MonoBehaviour
             enemyShootingScript = GetComponent<EnemyShooting>();
             enemyMovementScript = GetComponent<EnemyMovement>();
         }
+    }
+
+    private IEnumerator Keycard()
+    {
+        keycardText.SetActive(true);
+        yield return new WaitForSeconds(2);
+        keycardText.SetActive(false);
     }
 
     private void Update()
@@ -50,6 +61,15 @@ public class EnemyHealth : MonoBehaviour
             }
             
         }
+
+        if(bosMerahSpecial && currentHP <= 0)
+        {
+            PlayerPrefs.SetInt("KeycardLantai4", 1);
+            audioBosKeycard.Play();
+            StartCoroutine(Keycard());
+        }
+
+
 
         if(tank && currentHP <= 30)
         {

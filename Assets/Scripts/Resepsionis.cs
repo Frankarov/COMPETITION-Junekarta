@@ -6,9 +6,9 @@ public class Resepsionis : MonoBehaviour
 {
     public GameObject image;
     bool canShowCanvas;
-    private PlayerMovement player;
-    private Shooting playerShooting;
-    private PlayerStat playerStatus;
+    public PlayerMovement player;
+    public Shooting playerShooting;
+    public PlayerStat playerStatus;
     public GameObject keyCaps;
     public GameObject canvasCats;
     private void Update()
@@ -64,8 +64,10 @@ public class Resepsionis : MonoBehaviour
 
     public void Close()
     {
-        
-        canvasCats.SetActive(false);
+
+            canvasCats.SetActive(false);
+
+
         player.canDash = true;
         player.canMoveYes = true;
         playerShooting.canShoot = true;

@@ -19,10 +19,12 @@ public class EnemyMelee : MonoBehaviour
 
     public Animator animatorMelee;
     private BoxCollider2D colliderEnemy;
+    private AudioSource audioTendang;
 
     private void Start()
     {
         colliderEnemy = GetComponent<BoxCollider2D>();
+        audioTendang = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -82,6 +84,7 @@ public class EnemyMelee : MonoBehaviour
     {
         swing.SetActive(true);
         isMelee = true;
+        audioTendang.Play();
     }
 
     public void AnimEventSwingFalse()

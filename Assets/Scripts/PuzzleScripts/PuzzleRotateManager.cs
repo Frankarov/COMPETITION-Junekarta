@@ -20,6 +20,7 @@ public class PuzzleRotateManager : MonoBehaviour
         {
             Debug.Log("PuzzleWin");
             Invoke("GainKeyCard", 1f);
+            PlayerPrefs.SetInt("KeycardLantai4", 1);
             gembok = true;
             isWin = true;
         }
