@@ -8,6 +8,8 @@ public class PuzzleRotate : MonoBehaviour, IPointerClickHandler
 {
 
     private RectTransform rectTransform;
+    public PuzzleRotateManager puzzleRotateManagerScript;
+    public AudioSource audioKlikRotate;
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -15,8 +17,15 @@ public class PuzzleRotate : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("Klikled");
-        rectTransform.Rotate(Vector3.forward, 90f);
+        if (!puzzleRotateManagerScript.isWin)
+        {
+            rectTransform.Rotate(Vector3.forward, 90f);
+            audioKlikRotate.Play();
+        }
+
     }
+
+
 
 
 }

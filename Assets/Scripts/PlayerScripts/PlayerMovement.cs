@@ -4,57 +4,58 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 3;
-
-    public GameObject Player;
+    [Header("Components")]
     private Rigidbody2D rb;
-    public Animator animatorJalan;
-    public AudioSource audioJalan;
+    private BoxCollider2D colliderPlayer;
+    [SerializeField] private float speed = 3;
+    public bool isMoving;
+    public bool canMoveYes = true;
 
-    private bool canDash = true;
+    [Header("Dash Components")]
+    [SerializeField] private float dashingPower = 7f;
+    [SerializeField]  private float dashingTime = 0.2f;
+    [SerializeField]  private float dashingCooldown = 1f;
+    public SpriteRenderer playerRollSprite;
+    public bool canDash = true;
     public bool isDash = false;
-    [SerializeField]
-    private float dashingPower = 7f;
-    [SerializeField]
-    private float dashingTime = 0.2f;
-    [SerializeField]
-    private float dashingCooldown = 1f;
+
+    [Header("Animators")]
     public Animator animatorPlayer;
     public Animator animatorRoll;
+    public Animator animatorJalan;
 
-    public BoxCollider2D colliderPlayer;
-
-    public GameObject[] offPartRolled;
+    [Header("Scripts References")]
     private Shooting shootingScript;
-    public SpriteRenderer playerRoll;
- 
+    private SoundManager sfx;
+    private ChangeManager changeManagerScript;
+    private PlayerStat playerStatScript;
+
+    [Header("Sound")]
+    public AudioSource audioSourceJalan;
+    public AudioSource audioSourceRoll;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         shootingScript = GetComponent<Shooting>();
+        colliderPlayer = GetComponent<BoxCollider2D>();
+        changeManagerScript = GetComponent<ChangeManager>();
+        playerStatScript = GetComponent<PlayerStat>();
+        sfx = GetComponent<SoundManager>();
+        canMoveYes = true;
     }
 
     private void FixedUpdate()
     {
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(horizontalInput * speed * Time.deltaTime, 0f, 0f));
-        bool isMoving = Mathf.Abs(horizontalInput) > 0f;
-        animatorJalan.SetBool("isMoving", isMoving);
-
-        if (isMoving)
+        if (!playerStatScript.isDie && canMoveYes)
         {
-            //if (!audioJalan.isPlaying)
-            //{
-                //audioJalan.Play();
-            //}
+            float horizontalInput = Input.GetAxis("Horizontal");
+            transform.Translate(new Vector3(horizontalInput * speed * Time.deltaTime, 0f, 0f));
+            isMoving = Mathf.Abs(horizontalInput) > 0f;
+            animatorJalan.SetBool("isMoving", isMoving);
+            AudioJalan();
         }
-        else
-        {
-            //audioJalan.Stop();
-        }
+
     }
 
     private void Update()
@@ -72,40 +73,62 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void AudioJalan()
+    {
+        if (isMoving)
+        {
+            if (!audioSourceJalan.isPlaying && audioSourceJalan != null && audioSourceJalan.enabled)
+            {
+                audioSourceJalan.pitch = 2f;
+                audioSourceJalan.Play();
+            }
+        }
+        else
+        {
+            audioSourceJalan.pitch = 1f;
+            audioSourceJalan.Stop();
+        }
+    }
+
     private IEnumerator Dash()
     {
-        Debug.Log("Dash!");
         isDash = true;
         canDash = false;
+        shootingScript.canShoot = false;
+        colliderPlayer.enabled = false;
+        playerRollSprite.enabled = true;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 dashDirection = mousePos - transform.position;
         dashDirection.Normalize();
         rb.velocity = dashDirection * dashingPower;
-        colliderPlayer.enabled = false;
-
-
         rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+
         animatorRoll.SetBool("isRolling",true);
+        audioSourceRoll.Play();
 
-        shootingScript.canShoot = false;
-        foreach (GameObject obj in offPartRolled)
-        {
-            obj.SetActive(false);
-        }
+        changeManagerScript.TurnOff();
+        Invoke("RollingDone", 0.5f);
 
-        playerRoll.enabled = true;
+        yield return new WaitForSeconds(dashingTime); ///
 
-        yield return new WaitForSeconds(dashingTime); //
         shootingScript.canShoot = true;
         colliderPlayer.enabled = true;
         rb.velocity = Vector2.zero;
 
-
-        yield return new WaitForSeconds(dashingCooldown); //
+        yield return new WaitForSeconds(dashingCooldown); ///
 
         canDash = true;
+        
+    }
+
+    private void RollingDone()
+    {
         isDash = false;
+        changeManagerScript.TurnOn();
+        animatorRoll.SetBool("isRolling", false);
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        playerRollSprite.enabled = false;
     }
 
 

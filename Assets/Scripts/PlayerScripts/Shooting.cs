@@ -7,18 +7,22 @@ using CodeMonkey;
 
 public class Shooting : MonoBehaviour
 {
-
     public event EventHandler<OnShootEventArgs> OnShoot;
-
+    [Header("Shooting Components")]
     public Transform aimTransform;
     private Transform aimGunEndPointTransform;
     private GameObject aimGunEndPointObject;
-    private PlayerMovement playerMovementScript;
 
-    [SerializeField]
-    private int bulletCount = 17;
+    [Header("Scripts References")]
+    private PlayerMovement playerMovementScript;
+    private PlayerStat playerStatScript;
+    private SoundManager sfx;
+
+    [Header("Essentials")]
+    [SerializeField]  private int bulletCount = 17;
     private bool isReloading = false;
     public bool canShoot = true;
+
 
     public class OnShootEventArgs : EventArgs
     {
@@ -30,30 +34,26 @@ public class Shooting : MonoBehaviour
     {
         canShoot = true;
         playerMovementScript = GetComponent<PlayerMovement>();
+        playerStatScript = GetComponent<PlayerStat>();
+        sfx = GetComponent<SoundManager>();
+
     }
 
     private void Update()
     {
-        // ... (existing code)
-
         if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
-            StartCoroutine(ReloadProcess(2f)); // Trigger reload for 2 seconds
+            StartCoroutine(ReloadProcess(1f));
         }
 
-        if (Input.GetMouseButtonDown(0) && canShoot && bulletCount > 0 && !isReloading)
-        {
-            Shoot();
-        }
+        EksekusiNembak();
+
     }
 
     private void Shoot()
     {
-        Debug.Log("Tembak");
         aimGunEndPointObject = GameObject.Find("GunEndPointPosition");
         aimGunEndPointTransform = aimGunEndPointObject.transform;
-        bulletCount--;
-
         Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
         OnShoot?.Invoke(this, new OnShootEventArgs
         {
@@ -61,21 +61,46 @@ public class Shooting : MonoBehaviour
             shootPosition = mousePosition,
         });
 
-        UtilsClass.ShakeCamera(0.05f, 0.15f);
         MekanikTembak();
         MekanikHeadshot();
+        bulletCount--;
+        UtilsClass.ShakeCamera(0.05f, 0.15f);
+        
+    }
+
+    private void EksekusiNembak()
+    {
+        if (Input.GetMouseButtonDown(0) && canShoot && bulletCount > 0 && !isReloading && !playerStatScript.isDie)
+        {
+            Shoot();
+            sfx.audioSource.clip = sfx.audioClip[1];
+            sfx.audioSource.Play();
+
+        }
+        else if (Input.GetMouseButtonDown(0) && canShoot && bulletCount <= 0 && !isReloading && !playerStatScript.isDie)
+        {
+            sfx.audioSource.clip = sfx.audioClip[2];
+            sfx.audioSource.Play();
+        }
     }
 
     private IEnumerator ReloadProcess(float reloadTime)
     {
+        if (!playerStatScript.isDie)
+        {
+            sfx.audioSource.clip = sfx.audioClip[0];
+            sfx.audioSource.Play();
+            sfx.audioSource.pitch = 0.6f;
+        }
+
         isReloading = true;
         Debug.Log("Reloading...");
 
         yield return new WaitForSeconds(reloadTime);
 
         bulletCount = 17;
-
         isReloading = false;
+        sfx.audioSource.pitch = 1f;
         Debug.Log("Reloaded!");
     }
 
@@ -86,10 +111,8 @@ public class Shooting : MonoBehaviour
         if (hit.collider != null)
         {
             EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
-            EnemyHeadshot enemyKepala = hit.collider.GetComponent<EnemyHeadshot>();
             if (enemy != null)
             {
-                Debug.Log("Enemy found!");
                 enemy.TakeDamage(10);
             }
         }
@@ -105,7 +128,6 @@ public class Shooting : MonoBehaviour
             EnemyHeadshot enemyKepala = hit.collider.GetComponent<EnemyHeadshot>();
             if (enemyKepala != null)
             {
-                Debug.Log("EnemyKepala found");
                 enemyKepala.HeadshotExecute();
             }
         }

@@ -5,22 +5,36 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
 
-    public int maxHP;
-    [SerializeField]
-    private int currentHP;
-    public Animator animatorPlayerMati;
-    public GameObject[] gameObjectOff;
+    [Header("Components")]
+    [SerializeField] private int maxHP;
+    private BoxCollider2D colliderPlayer;
+    private Rigidbody2D rb;
+    public int currentHP;
+    public bool isDie;
+    public bool playerDiHit;
+
+
     public GameObject playerMati;
     public SpriteRenderer playerKenaHit;
-    public bool isDie;
-
+    
+    [Header("Scripts References")]
     private Shooting shootingScript;
+    private ChangeManager changeManagerScript;
 
+    [Header("Animators")]
     public Animator animatorHit;
+    public Animator animatorPlayerMati;
+
+    [Header("Checkpoint Components")]
+    private Vector3 checkpointPosition;
+
 
     private void Start()
     {
         shootingScript = GetComponent<Shooting>();
+        changeManagerScript = GetComponent<ChangeManager>();
+        colliderPlayer = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
         currentHP = maxHP;
     }
 
@@ -32,16 +46,40 @@ public class PlayerStat : MonoBehaviour
         }
     }
 
+    public void SetCheckpointPosition(Vector3 position)
+    {
+        Debug.Log("Checkpoint Set");
+        checkpointPosition = position;
+    }
+
+    private void BackToCheckpoint()
+    {
+        Debug.Log("Back To CheckPoint");
+        transform.position = checkpointPosition;
+        isDie = false;
+        changeManagerScript.TurnOn();
+        playerMati.SetActive(false);
+        colliderPlayer.enabled = true;
+        animatorPlayerMati.SetBool("playerMati", false);
+
+        float timer = 0;
+        timer =+ Time.deltaTime;
+        if(timer == 3)
+        {
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
+       
+    }
     private void Die()
     {
-        Debug.Log("PlayerDie");
         isDie = true;
-        foreach (GameObject player in gameObjectOff)
-        {
-            player.SetActive(false);
-        }
+        changeManagerScript.TurnOff();
         playerMati.SetActive(true);
         animatorPlayerMati.SetBool("playerMati", true);
+        colliderPlayer.enabled = false;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+        Invoke("RefillHealth", 1f);
+        Invoke("BackToCheckpoint", 3f);
 
     }
 
@@ -50,24 +88,24 @@ public class PlayerStat : MonoBehaviour
         Debug.Log("PlayerTakeDamage");
         currentHP -= damage;
         animatorHit.SetBool("KenaHit", true);
-        Invoke("GaransiTurnOffHit", 0.15f);
         playerKenaHit.enabled = true;
+        playerDiHit = true;
         shootingScript.canShoot = false;
-        foreach (GameObject player in gameObjectOff)
-        {
-            player.SetActive(false);
-        }
+        changeManagerScript.TurnOff();
+        Invoke("TakeDamageDone", 0.15f);
     }
 
-    private void GaransiTurnOffHit()
+    private void TakeDamageDone()
     {
         animatorHit.SetBool("KenaHit", false);
+        playerDiHit = false;
         playerKenaHit.enabled = false;
         shootingScript.canShoot = true;
-        foreach (GameObject player in gameObjectOff)
-        {
-            player.SetActive(true);
-        }
+        changeManagerScript.TurnOn();
     }
 
+    private void RefillHealth()
+    {
+        currentHP = 100;
+    }
 }
