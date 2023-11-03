@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShootingTracer : MonoBehaviour
 {
-    public Shooting shootingScript;
+    private Shooting shootingScript;
     public Material weaponTracerMaterial;
     public Sprite gunMuzzle;
     public GameObject pivotDecider;
@@ -14,6 +14,7 @@ public class ShootingTracer : MonoBehaviour
 
     private void Start()
     {
+        shootingScript = GetComponent<Shooting>();
         shootingScript.OnShoot += shootingScript_OnShoot;
     }
 

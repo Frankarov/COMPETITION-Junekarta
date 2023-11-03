@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,13 +7,24 @@ using UnityEngine.UIElements;
 
 public class PuzzleManager : MonoBehaviour
 {
+    public PlayerMovement playerMovementScript;
+    public Shooting shootingScript;
 
     public int puzzleDragDropScore;
     public Image kertasCode;
     public Animator animatorKertasCode;
     private bool kertasCodeLagiMuncul;
     public GameObject canvasPuzzleDragDrop;
-    private bool gembok = false;
+    public bool gembok = false;
+    public GameObject colliderPuzzleDragDrop;
+    public GameObject colliderLihatKertas;
+
+    private AudioSource audioKertas;
+
+    private void Start()
+    {
+        audioKertas = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -41,6 +53,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void LagiMuncul() //animation event
     {
+        audioKertas.Play();
         kertasCodeLagiMuncul = true;
     }
 
@@ -52,6 +65,12 @@ public class PuzzleManager : MonoBehaviour
     public void ButtonExitPuzzleDragDrop()
     {
         canvasPuzzleDragDrop.SetActive(false);
+        playerMovementScript.canDash = true;
+        playerMovementScript.canMoveYes = true;
+        shootingScript.canShoot = true;
+        colliderPuzzleDragDrop.SetActive(false);
+        colliderLihatKertas.SetActive(true);
+        
     }
 
 }

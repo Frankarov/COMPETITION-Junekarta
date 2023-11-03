@@ -7,19 +7,19 @@ using CodeMonkey;
 
 public class Shooting : MonoBehaviour
 {
-    //Shooting Mechanics
     public event EventHandler<OnShootEventArgs> OnShoot;
+    [Header("Shooting Components")]
     public Transform aimTransform;
     private Transform aimGunEndPointTransform;
     private GameObject aimGunEndPointObject;
 
-    //References
+    [Header("Scripts References")]
     private PlayerMovement playerMovementScript;
+    private PlayerStat playerStatScript;
     private SoundManager sfx;
 
-    //Essentials
-    [SerializeField]
-    private int bulletCount = 17;
+    [Header("Essentials")]
+    [SerializeField]  private int bulletCount = 17;
     private bool isReloading = false;
     public bool canShoot = true;
 
@@ -34,6 +34,7 @@ public class Shooting : MonoBehaviour
     {
         canShoot = true;
         playerMovementScript = GetComponent<PlayerMovement>();
+        playerStatScript = GetComponent<PlayerStat>();
         sfx = GetComponent<SoundManager>();
 
     }
@@ -69,14 +70,14 @@ public class Shooting : MonoBehaviour
 
     private void EksekusiNembak()
     {
-        if (Input.GetMouseButtonDown(0) && canShoot && bulletCount > 0 && !isReloading)
+        if (Input.GetMouseButtonDown(0) && canShoot && bulletCount > 0 && !isReloading && !playerStatScript.isDie)
         {
             Shoot();
             sfx.audioSource.clip = sfx.audioClip[1];
             sfx.audioSource.Play();
 
         }
-        else if (Input.GetMouseButtonDown(0) && canShoot && bulletCount <= 0 && !isReloading)
+        else if (Input.GetMouseButtonDown(0) && canShoot && bulletCount <= 0 && !isReloading && !playerStatScript.isDie)
         {
             sfx.audioSource.clip = sfx.audioClip[2];
             sfx.audioSource.Play();
@@ -85,9 +86,13 @@ public class Shooting : MonoBehaviour
 
     private IEnumerator ReloadProcess(float reloadTime)
     {
-        sfx.audioSource.clip = sfx.audioClip[0];
-        sfx.audioSource.Play();
-        sfx.audioSource.pitch = 0.6f;
+        if (!playerStatScript.isDie)
+        {
+            sfx.audioSource.clip = sfx.audioClip[0];
+            sfx.audioSource.Play();
+            sfx.audioSource.pitch = 0.6f;
+        }
+
         isReloading = true;
         Debug.Log("Reloading...");
 
