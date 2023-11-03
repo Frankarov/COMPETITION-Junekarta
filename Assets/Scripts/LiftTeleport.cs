@@ -9,6 +9,7 @@ public class LiftTeleport : MonoBehaviour
     public Transform player;
     public Animator animatorFade;
     public Transform portal;
+    public Camera cameraMain;
 
     private void Update()
     {
@@ -40,5 +41,6 @@ public class LiftTeleport : MonoBehaviour
     public void PindahLift()
     {
         player.position = portal.position;
+        cameraMain.backgroundColor = Color.black;
     }
 }
