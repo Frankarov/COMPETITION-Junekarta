@@ -11,12 +11,22 @@ public class LiftTeleport : MonoBehaviour
     public Transform portal;
     public Camera cameraMain;
 
+    public Shooting shooting;
+    public PlayerStat playerStat;
+    public PlayerMovement playerMovement;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && masukCollider)
         {
             animatorFade.SetTrigger("FadeHitamMulai");
             Invoke("PindahLift", 1.3f);
+            shooting.canShoot = false;
+            playerMovement.canDash = false;
+            playerMovement.canMoveYes = false;
+            shooting.canReload = false;
+
+
         }
     }
 

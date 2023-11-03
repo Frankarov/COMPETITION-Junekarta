@@ -13,11 +13,19 @@ public class LiftUI : MonoBehaviour
     public Transform[] portalLantai;
     public Animator animatorFade;
     public Transform player;
-    
+
+    public PlayerMovement movement;
+    public Shooting shooting;
+    public Animator animatorPlayer;
+
+    public GameObject keycap;
+
     private void Update()
     {
         keycard3 = PlayerPrefs.GetInt("KeyardLantai3");
         keycard4 = PlayerPrefs.GetInt("KeyardLantai4");
+
+
 
         button[0].interactable = true;
         button[1].interactable = true;
@@ -35,7 +43,13 @@ public class LiftUI : MonoBehaviour
 
         if (masukCollider && Input.GetKeyDown(KeyCode.E))
         {
+            keycap.SetActive(true);
             canvasLift.SetActive(true);
+            movement.canMoveYes = false;
+            movement.canDash = false;
+            shooting.canReload = false;
+            shooting.canShoot = false;
+            animatorPlayer.SetBool("isMoving", false);
         }
 
     }
@@ -59,19 +73,26 @@ public class LiftUI : MonoBehaviour
 
     private void ProsedurLift()
     {
+        keycap.SetActive(false);
         animatorFade.SetTrigger("FadeHitamMulai");
+        movement.canMoveYes = false;
+        movement.canDash = false;
+        shooting.canReload = false;
+        shooting.canShoot = false;
+        animatorPlayer.SetBool("isMoving", false);
     }
 
     public void KeLantaiFirst()
     {
         ProsedurLift();
-        Invoke("Teleport1", 1.2f);
+        Invoke("Teleport1", 2f);
         
     }
     public void KeLantaiSecond()
     {
-        Invoke("Teleport2", 1.2f);
         ProsedurLift();
+        Invoke("Teleport2", 2f);
+        
     }
     public void KeLantaiThird()
     {

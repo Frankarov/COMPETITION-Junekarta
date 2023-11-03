@@ -68,9 +68,19 @@ public class PuzzleManager : MonoBehaviour
         playerMovementScript.canDash = true;
         playerMovementScript.canMoveYes = true;
         shootingScript.canShoot = true;
+        shootingScript.canReload = true;
         colliderPuzzleDragDrop.SetActive(false);
         colliderLihatKertas.SetActive(true);
         
     }
+    
 
+    public void ButtonExitNormal()
+    {
+        canvasPuzzleDragDrop.SetActive(false);
+        playerMovementScript.canDash = true;
+        playerMovementScript.canMoveYes = true;
+        shootingScript.canShoot = true;
+        shootingScript.canReload = true;
+    }
 }

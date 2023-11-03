@@ -21,6 +21,7 @@ public class Shooting : MonoBehaviour
     [Header("Essentials")]
     [SerializeField]  private int bulletCount = 17;
     private bool isReloading = false;
+    public bool canReload = false;
     public bool canShoot = true;
 
 
@@ -36,6 +37,7 @@ public class Shooting : MonoBehaviour
         playerMovementScript = GetComponent<PlayerMovement>();
         playerStatScript = GetComponent<PlayerStat>();
         sfx = GetComponent<SoundManager>();
+        canReload = true;
 
     }
 
@@ -86,7 +88,7 @@ public class Shooting : MonoBehaviour
 
     private IEnumerator ReloadProcess(float reloadTime)
     {
-        if (!playerStatScript.isDie)
+        if (!playerStatScript.isDie & canReload)
         {
             sfx.audioSource.clip = sfx.audioClip[0];
             sfx.audioSource.Play();

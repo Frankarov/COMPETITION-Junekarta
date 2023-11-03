@@ -22,6 +22,7 @@ public class ColliderPuzzle : MonoBehaviour
             playerMovementScript.canMoveYes = false;
             playerMovementScript.canDash = false;
             playerMovementScript.isMoving = false;
+            shootingScript.canReload = false;
             shootingScript.canShoot = false;
 
         }
@@ -58,6 +59,7 @@ public class ColliderPuzzle : MonoBehaviour
         playerMovementScript.canMoveYes = true;
         playerMovementScript.canDash = true;
         shootingScript.canShoot = true;
+        shootingScript.canReload = true;
     }
 
 }

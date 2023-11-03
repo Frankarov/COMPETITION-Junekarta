@@ -9,24 +9,28 @@ public class Resepsionis : MonoBehaviour
     private PlayerMovement player;
     private Shooting playerShooting;
     private PlayerStat playerStatus;
+    public GameObject keyCaps;
+    public GameObject canvasCats;
     private void Update()
     {
         if(canShowCanvas && Input.GetKeyDown(KeyCode.E))
         {
-            gameObject.SetActive(true);
+            image.SetActive(true);
             player.canDash = false;
             player.canMoveYes = false;
             playerShooting.canShoot = false;
+            playerShooting.canReload = false;
         }
 
         if(playerStatus != null)
         {
-            if (gameObject.activeInHierarchy && playerStatus.playerDiHit)
+            if (image.activeInHierarchy && playerStatus.playerDiHit)
             {
-                gameObject.SetActive(false);
+                image.SetActive(false);
                 player.canDash = true;
                 player.canMoveYes = true;
                 playerShooting.canShoot = true;
+                playerShooting.canReload = true;
             }
         }
 
@@ -37,7 +41,7 @@ public class Resepsionis : MonoBehaviour
         Debug.Log(collision);
         if (collision.CompareTag("Player"))
         {
-            
+            keyCaps.SetActive(true);
             player = collision.GetComponent<PlayerMovement>();
             playerShooting = collision.GetComponent<Shooting>();
             playerStatus = collision.GetComponent<PlayerStat>();
@@ -49,7 +53,8 @@ public class Resepsionis : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
+           
+            keyCaps.SetActive(false);
             player = null;
             playerShooting = null;
             playerStatus = null;
@@ -59,9 +64,11 @@ public class Resepsionis : MonoBehaviour
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        
+        canvasCats.SetActive(false);
         player.canDash = true;
         player.canMoveYes = true;
         playerShooting.canShoot = true;
+        playerShooting.canReload = true;
     }
 }
