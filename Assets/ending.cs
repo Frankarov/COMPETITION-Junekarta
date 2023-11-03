@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ending : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject HPBOI;
+    public GameObject endingcoy;
+    private bool gembok;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player") && !gembok)
+        {
+            HPBOI.SetActive(false);
+            endingcoy.SetActive(true);
+            Invoke("hahaha", 10);
+            gembok = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void hahaha()
     {
-        
+        SceneManager.LoadScene(0);
     }
+
+
 }
