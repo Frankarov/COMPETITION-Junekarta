@@ -6,7 +6,9 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPosition;
-    public GameObject player;
+    public Transform bulletPosition2;
+    public Transform bulletPosition3;
+    public Transform player;
     public bool enemySeePlayer;
     public float distance;
 
@@ -14,6 +16,7 @@ public class EnemyShooting : MonoBehaviour
     public Animator animatorEnemy;
     private EnemyHealth enemyHealthScript;
     private EnemyMovement enemyMovementScript;
+    public bool isTank;
 
     private void Start()
     {
@@ -61,7 +64,17 @@ public class EnemyShooting : MonoBehaviour
 
     public void ShootBullet()
     {
-        Instantiate(bullet, bulletPosition.position, Quaternion.identity);
+        if (isTank)
+        {
+            Instantiate(bullet, bulletPosition.position, Quaternion.identity);
+            Instantiate(bullet, bulletPosition2.position, Quaternion.identity);
+            Instantiate(bullet, bulletPosition3.position, Quaternion.identity);
+        }
+        else
+        {
+           Instantiate(bullet, bulletPosition.position, Quaternion.identity);
+        }
+ 
     }
 
 }
